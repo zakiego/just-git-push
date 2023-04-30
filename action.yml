@@ -1,6 +1,13 @@
 name: Just Git Push
+
 description: Simply push your code with Git and focus on your work
+
 author: Zakiego
+
+branding:
+  icon: "terminal"
+  color: "gray-dark"
+
 inputs:
   email:
     description: "The email address of the Git user"
@@ -20,6 +27,7 @@ inputs:
   branch:
     description: "The name of the branch to push changes to"
     required: true
+
 runs:
   using: "docker"
   image: "Dockerfile"
