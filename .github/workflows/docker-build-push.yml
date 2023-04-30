@@ -6,7 +6,7 @@ on:
       - main
 
 env:
-  IMAGE_NAME: your-dockerhub-username/your-image-name
+  IMAGE_NAME: zakiego/git-auto-commit
   TAG: latest
 
 jobs:
