@@ -17,16 +17,16 @@ RUN chmod +x /entrypoint-test.sh
 
 # Create a test folder and initialize a git repository
 
-ENV USERNAME="John Doe"
-ENV EMAIL="johndoe@example.com"
-ENV COMMIT_MESSAGE="Initial commit"
+ENV username="John Doe"
+ENV email="johndoe@example.com"
+ENV commit_message="Initial commit"
 
 RUN mkdir test && \
     cd test && \
     git init && \
     touch dummy.txt && \
     ../../entrypoint-test.sh && \
-    git log -1 | grep "${COMMIT_MESSAGE}" && \
+    git log -1 | grep "${commit_message}" && \
     cd .. && \
     rm -rf test
 
