@@ -1,6 +1,6 @@
-# Git Push Action
+# Just Git Push
 
-This GitHub Action pushes changes to a remote Git repository.
+This GitHub Action to simply push your code with Git and focus on your work.
 
 ## Inputs
 
@@ -30,7 +30,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Push changes
-        uses: zakiego/git-push-action@main
+        uses: zakiego/just-git-push@main
         with:
           USERNAME: "github-actions[bot]"
           EMAIL: "41898282+github-actions[bot]@users.noreply.github.com"
@@ -40,4 +40,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
 
-In the above example, the action runs when changes are pushed to the `main` branch. It first checks out the code and then runs the `zakiego/git-push-action` action to push the changes to the specified remote Git repository. Make sure to set the required input values for your specific use case.
+In the above example, the action runs when changes are pushed to the `main` branch. It first checks out the code and then runs the `zakiego/just-git-push` action to push the changes to the specified remote Git repository. Make sure to set the required input values for your specific use case.
