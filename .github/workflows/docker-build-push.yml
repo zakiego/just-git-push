@@ -28,6 +28,3 @@ jobs:
           context: .
           push: true
           tags: ${{ env.IMAGE_NAME }}:${{ env.TAG }}
-
-      - name: Create release
-        uses: ncipollo/release-action@v1
