@@ -15,7 +15,6 @@ if [ -n "$(git status --porcelain)" ]; then
   git commit -m "$commit_message"
 
   # Push changes to the remote repository
-  # git push "$remote" "$branch" -u "$username" -p "$github_token"
   # git remote set-url origin https://"$username":"$github_token"@github.com/"$repository".git
   # git push origin "$branch"
   
