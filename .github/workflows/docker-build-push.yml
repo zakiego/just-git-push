@@ -1,4 +1,4 @@
-name: Docker Build and Push
+name: Docker Build and Push with Release
 
 on:
   push:
@@ -28,3 +28,6 @@ jobs:
           context: .
           push: true
           tags: ${{ env.IMAGE_NAME }}:${{ env.TAG }}
+
+      - name: Create release
+        uses: ncipollo/release-action@v1

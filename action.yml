@@ -1,0 +1,30 @@
+name: Git Push Action
+description: Pushes changes to a remote Git repository
+author: Zakiego
+inputs:
+  email:
+    description: "The email address of the Git user"
+    required: true
+  username:
+    description: "The username of the Git user"
+    required: true
+  commit-message:
+    description: "The commit message to use"
+    required: true
+  github-token:
+    description: "The GitHub access token for the repository"
+    required: true
+  repository:
+    description: "The name of the repository to push changes to"
+    required: true
+  branch:
+    description: "The name of the branch to push changes to"
+    required: true
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - sh
+    - -c
+    - |
+      /entrypoint.sh "$EMAIL" "$USERNAME" "$COMMIT_MESSAGE" "$GITHUB_TOKEN" "$REPOSITORY" "$BRANCH"
