@@ -34,7 +34,7 @@ jobs:
         with:
           USERNAME: "github-actions[bot]"
           EMAIL: "41898282+github-actions[bot]@users.noreply.github.com"
-          commit-message: "Test auto push"
+          COMMIT_MESSAGE: "This is an automated commit by GitHub Actions."
           BRANCH: ${{ github.ref_name }}
           REPOSITORY: ${{ github.repository }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
