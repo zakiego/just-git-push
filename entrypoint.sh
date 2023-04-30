@@ -5,6 +5,7 @@ set -e
 # Configure Git user and email
 git config --global user.email "$email"
 git config --global user.name "$username"
+git config --global --add safe.directory '*'
 
 # Add changes to the index
 if [ -n "$(git status --porcelain)" ]; then
