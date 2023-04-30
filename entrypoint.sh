@@ -16,6 +16,7 @@ if [ -n "$(git status --porcelain)" ]; then
 
   # Push changes to the remote repository
   git remote set-url origin https://"$username":"$github_token"@github.com/"$repository".git
+  git remote -v
   git push origin "$branch"
 
 fi
