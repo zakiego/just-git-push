@@ -1,6 +1,6 @@
 name: Git Push Action
 description: Pushes changes to a remote Git repository
-author: Zakiego
+author: M. Zakiyuddin Munziri
 inputs:
   email:
     description: "The email address of the Git user"
