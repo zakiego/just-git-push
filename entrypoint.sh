@@ -19,4 +19,7 @@ if [ -n "$(git status --porcelain)" ]; then
   git remote -v
   git push origin "$BRANCH"
 
+  echo "Changes pushed to remote repository 🥳🎉"
+else
+  echo "No changes to commit 😥"
 fi
